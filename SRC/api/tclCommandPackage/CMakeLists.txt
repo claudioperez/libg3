@@ -44,16 +44,16 @@ target_sources(OpenSeesCommandPackage PRIVATE
     "database/TclMySQL.cpp"
     #"database/TclBerkeleyDB.cpp"
 
-    "recorder/TclRecorderCommands.cpp"
-    "domain/component/TclParameterCommands.cpp"
-    "domain/component/TclUpdateMaterialCommand.cpp"
+    "commands/recorder.cpp"
+    "commands/modeling/TclParameterCommands.cpp"
+    "commands/modeling/TclUpdateMaterialCommand.cpp"
 # LOADS & PATTERNS
-    "domain/groundMotion/TclGroundMotionCommand.cpp"
-    "domain/pattern/TclPatternCommand.cpp"
-    "domain/pattern/TclSeriesCommand.cpp"
-    "domain/pattern/TclSeriesIntegratorCommand.cpp"
+    "commands/loading/groundMotion.cpp"
+    "commands/loading/TclPatternCommand.cpp"
+    "commands/loading/TclSeriesCommand.cpp"
+    "commands/loading/TclSeriesIntegratorCommand.cpp"
     #"domain/pattern/drm/TclPatternCommand.cpp"
-    "domain/region/TclRegionCommands.cpp"
+    "commands/modeling/region.cpp"
 #
 # ELEMENTS
 #
@@ -103,30 +103,30 @@ target_sources(OpenSeesCommandPackage PRIVATE
     "commands/modeling/hystereticBackbone.cpp"
 
 # Multi-Dimensional Materials
-    "material/nD/soil/TclUpdateMaterialStageCommand.cpp"
-    #"material/nD/feap/TclFeapMaterialCommand.cpp"
+    "contrib/nDMaterial/soil/TclUpdateMaterialStageCommand.cpp"
+    #"contrib/nD/feap/TclFeapMaterialCommand.cpp"
 
 # Uniaxial
     "contrib/uniaxial/TclKikuchiAiken.cpp"
     "contrib/uniaxial/TclAxialSp.cpp"
     "contrib/uniaxial/fedeas/TclFedeasWrappers.cpp"
     "contrib/uniaxial/fedeas/TclFedeasMaterialCommand.cpp"
-    "material/uniaxial/PY/TclPyTzQzMaterialCommand.cpp"
-    "material/uniaxial/limitState/TclLimitState.cpp"
-    "material/uniaxial/snap/TclSnapMaterialCommand.cpp"
-    "material/uniaxial/stiffness/TclModelBuilderStiffnessDegradationCommand.cpp"
-    "material/uniaxial/strength/TclModelBuilderStrengthDegradationCommand.cpp"
-    "material/uniaxial/unloading/TclModelBuilderUnloadingRuleCommand.cpp"
-    "material/uniaxial/drain/TclDrainMaterialCommand.cpp"
-    "material/yieldSurface/evolution/TclModelBuilderYS_EvolutionCommand.cpp"
-    "material/yieldSurface/plasticHardeningMaterial/TclModelBuilderYSPlasticMaterialCommand.cpp"
-    "material/yieldSurface/yieldSurfaceBC/TclModelBuilderYieldSurfaceBCCommand.cpp"
+    "contrib/uniaxial/PY/TclPyTzQzMaterialCommand.cpp"
+    "contrib/uniaxial/limitState/TclLimitState.cpp"
+    "contrib/uniaxial/snap/TclSnapMaterialCommand.cpp"
+    "contrib/uniaxial/stiffness/TclModelBuilderStiffnessDegradationCommand.cpp"
+    "contrib/uniaxial/strength/TclModelBuilderStrengthDegradationCommand.cpp"
+    "contrib/uniaxial/unloading/TclModelBuilderUnloadingRuleCommand.cpp"
+    "contrib/uniaxial/drain/TclDrainMaterialCommand.cpp"
+    "contrib/yieldSurface/evolution/TclModelBuilderYS_EvolutionCommand.cpp"
+    "contrib/yieldSurface/plasticHardeningMaterial/TclModelBuilderYSPlasticMaterialCommand.cpp"
+    "contrib/yieldSurface/yieldSurfaceBC/TclModelBuilderYieldSurfaceBCCommand.cpp"
     #"material/uniaxial/backbone/TclModelBuilderBackboneCommand.cpp"
     #"material/uniaxial/TclNewUniaxialMaterial.cpp"
     #"contrib/uniaxial/fedeas/TclFedeasMaterialCommand.cpp"
 
 # Section
-    "material/section/yieldSurface/TclModelBuilderYS_SectionCommand.cpp"
+    "contrib/yieldSurface/TclModelBuilderYS_SectionCommand.cpp"
 
 #
 # Reliability & Optimization 
