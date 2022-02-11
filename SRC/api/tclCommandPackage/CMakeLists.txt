@@ -40,9 +40,9 @@ target_sources(OpenSeesCommandPackage PRIVATE
     TclPackageClassBroker.cpp
 
 # Database
-    "database/TclDatabaseCommands.cpp"
-    "database/TclMySQL.cpp"
-    #"database/TclBerkeleyDB.cpp"
+    "commands/database/TclDatabaseCommands.cpp"
+    "commands/database/TclMySQL.cpp"
+    #"commands/database/TclBerkeleyDB.cpp"
 
     "commands/recorder.cpp"
     "commands/modeling/TclParameterCommands.cpp"

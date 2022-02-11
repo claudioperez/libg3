@@ -1,4 +1,3 @@
-
 // standard library
 #include <array>
 #include <string>

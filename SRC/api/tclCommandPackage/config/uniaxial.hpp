@@ -1,6 +1,4 @@
-
 // Written: fmk, MHS, cmp
-// Created: 07/99
 //
 // Description: This file contains the function invoked when the user invokes
 // the uniaxialMaterial command in the interpreter.
@@ -348,8 +346,8 @@ typedef UniaxialMaterial*(G3_TclUniaxialPackage)(ClientData, Tcl_Interp *, int, 
 G3_TclUniaxialPackage TclBasicBuilder_addFedeasMaterial;
 G3_TclUniaxialPackage TclBasicBuilder_addSnapMaterial;
 G3_TclUniaxialPackage TclBasicBuilder_addDrainMaterial;
-std::unordered_map<std::string, G3_TclUniaxialPackage *> tcl_uniaxial_package_table {
 
+std::unordered_map<std::string, G3_TclUniaxialPackage *> tcl_uniaxial_package_table {
   {"DRAIN",              TclBasicBuilder_addDrainMaterial },
 
   {"SNAP",               TclBasicBuilder_addSnapMaterial  },
@@ -358,6 +356,5 @@ std::unordered_map<std::string, G3_TclUniaxialPackage *> tcl_uniaxial_package_ta
 // #if defined(_STEEL2) || defined(OPSDEF_UNIAXIAL_FEDEAS)
   {"FEDEAS",             TclBasicBuilder_addFedeasMaterial},
 // #endif
-
 };
 
