@@ -140,7 +140,7 @@ target_sources(OpenSeesCommandPackage PRIVATE
 #
 # OTHER
 #
-    #"system_of_eqn/linearSOE/petsc/TclPetsc.cpp"
+    #"contrib/system_of_eqn/TclPetsc.cpp"
     
     #"${OPS_SRC_DIR}/interpreter/OpenSeesMiscCommands.cpp"
 
