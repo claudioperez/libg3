@@ -5,8 +5,9 @@
 #
 #=====================================================================
 cmake_minimum_required(VERSION 3.16)
-
+#
 # Dependencies
+# 
 find_package(TclStub)
 find_package(TCL)
 
@@ -16,7 +17,6 @@ target_sources(OpenSeesCommandPackage PRIVATE
 #
 # GENERAL COMMANDS
 #
-
 # Model Commands & Builders
     "modelbuilder/TclBuilder.cpp"
     "modelbuilder/basic/TclBasicBuilder.cpp"
@@ -161,7 +161,7 @@ target_compile_options(OpenSeesCommandPackage         PUBLIC  -fPIC)
 
 
 if (${TCL_INCLUDE_PATH})
-target_include_directories(OpenSeesCommandPackage PUBLIC ${TCL_INCLUDE_PATH})
+  target_include_directories(OpenSeesCommandPackage PUBLIC ${TCL_INCLUDE_PATH})
 endif()
 
 target_link_libraries(OpenSeesCommandPackage PRIVATE
@@ -173,8 +173,8 @@ target_link_libraries(OpenSeesCommandPackage PRIVATE
   OPS_ModelBuilder
   OPS_Uniaxial_Fedeas
   #OPS_Uniaxial_Fedeas_f
-  /home/claudio/packages/FEDEAS/build/src/uniaxial/libfedeas_uniaxial.a
-  #/home/claudio/pkgs/FEDEAS/bin/src/uniaxial/libfedeas_uniaxial.a
+  #/home/claudio/packages/FEDEAS/build/src/uniaxial/libfedeas_uniaxial.a
+  /home/claudio/pkgs/FEDEAS/bin/src/uniaxial/libfedeas_uniaxial.a
   G3_ObjectBroker
   #g3_uniaxial_io
   G3
